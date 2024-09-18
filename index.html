@@ -48,20 +48,22 @@
       <!--Hero -->
       <div class="hero">
         <picture>
-          <source srcset="./img/hero-600.jpg" media="(max-width:767px)" />
+          <source srcset="./img/hero-mobile.jpg" media="(max-width:767px)" />
           <img src="./img/hero.jpg" alt="Hero Image" />
         </picture>
         <div class="hero-content">
           <h3>Live Freely</h3>
           <p>The First Citizenship Subscription Service</p>
-          <h5><a href="#plans">Find A Plan</a></h5>
+          <button class="primary" onclick="location.href='#plans'">
+            Find a Plan
+          </button>
         </div>
       </div>
 
       <div class="stock-ticker">
         <picture>
           <source
-            srcset="./img/stock-market-ticker-600x40.jpg"
+            srcset="./img/stock-market-ticker-mobile.jpg"
             media="(max-width:767px)"
           />
           <img src="./img/stock-market-ticker.jpg" alt="Stock Market Ticker" />
@@ -69,9 +71,15 @@
       </div>
 
       <!-- Info section -->
-      <div class="omnipass info">
+      <div class="info">
         <div class="info - map">
-          <img src="./img/map-bubble.png" alt="map illustration" />
+          <picture>
+            <source
+              srcset="./img/map-bubble-mobile.png"
+              media="(max-width:767px)"
+            />
+            <img src="./img/map-bubble.png" alt="map illustration" />
+          </picture>
         </div>
         <div>
           <h1>Unlock Global Freedom</h1>
@@ -84,149 +92,188 @@
             horizons effortlessly.
           </p>
         </div>
-      </div>
-
-      <div class="how it works">
-        <div>
-          <h1>How it works</h1>
-          <picture>
-            <source
-              srcset="./img/how-it-works-600x90.png"
-              media="(max-width:767px)"
-            />
-            <img src="./img/how-it-works.png" alt="map illustration" />
-          </picture>
-          <a href="#plans"
-            ><img src="./img/scroller.png" alt="follow down arrow"
-          /></a>
+        <div class="info">
+          <div>
+            <h1>How it works</h1>
+            <picture>
+              <source
+                srcset="./img/how-it-works-mobile.png"
+                media="(max-width:767px)"
+              />
+              <img
+                src="./img/how-it-works.png"
+                alt="step 1:buy membership, step 2: regrister trip, step 3: travel the world"
+              />
+            </picture>
+            <a href="#plans"
+              ><img src="./img/scroller.png" alt="follow down arrow"
+            /></a>
+          </div>
         </div>
       </div>
+      <section class="prices" id="plans">
+        <!-- Prices -->
+        <div>
+          <div>
+            <h1>Plans</h1>
+            <div>
+              <article>
+                <h2>Tier .............: A”</h2>
+                <img src="./img/barcode.png" alt="barcode" />
 
-      <!-- Prices -->
-      <section id="plans">
-        <h1>Plans</h1>
-        <div class="plan prices">
-          <article>
-            <h2>Tier .............: A”</h2>
-            <img src="./img/barcode.png" alt="barcode" />
+                <p>
+                  Country variation : Turkey, Mexico, Taiwan, Thailand,
+                  Indonesia
+                </p>
+                <p></p>
+                <p></p>
+                <p>Access ........ : Basic Services</p>
+                <p>..................... : Limited legal rights</p>
+                <p></p>
+                <p>System ........................ : 01</p>
+                <p>Tier-Based</p>
+                <p></p>
+                <p>Category ..................... : 01.02</p>
+                <p>Path Operation</p>
+                <p>................................. EXPLORER</p>
 
-            <p>
-              Country variation : Turkey, Mexico, Taiwan, Thailand, Indonesia
-            </p>
-            <p></p>
-            <p></p>
-            <p>Access ........ : Basic Services</p>
-            <p>..................... : Limited legal rights</p>
-            <p></p>
-            <p>System ........................ : 01</p>
-            <p>Tier-Based</p>
-            <p></p>
-            <p>Category ..................... : 01.02</p>
-            <p>Path Operation</p>
-            <p>................................. EXPLORER</p>
+                <p>Fig .............: A</p>
 
-            <p>Fig .............: A</p>
+                <p>Alg ............ :</p>
+                <p>POS Intersections.. : A1, A2</p>
+                <p>Form ......... : A12</p>
 
-            <p>Alg ............ :</p>
-            <p>POS Intersections.. : A1, A2</p>
-            <p>Form ......... : A12</p>
+                <a href="./form.html"
+                  ><picture>
+                    <source
+                      srcset="./img/card-18-mobile.png"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./img/card-18.png"
+                      alt="Click to go to $18 Daily Plan"
+                    /> </picture
+                ></a>
+              </article>
 
-            <a href="./form.html"
-              ><img src="./img/card-18.jpg" alt="Click to go to $18 Daily Plan"
-            /></a>
-          </article>
+              <article>
+                <a href="./form.html"
+                  ><picture>
+                    <source
+                      srcset="./img/card-36-mobile.png"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./img/card-36.png"
+                      alt="Click to go to $36 Daily Plan"
+                    /> </picture
+                ></a>
+                <h2>Tier .............: B”</h2>
+                <img src="./img/barcode.png" alt="barcode" />
+                <p>
+                  Country variation : Argentina, Brazil, Chile, Malaysia, UAE
+                </p>
+                <p></p>
+                <p></p>
+                <p>Access ........ : Some legal rights</p>
+                <p>..................... : Expedited bureaucracy</p>
+                <p></p>
+                <p>System ........................ : 02</p>
+                <p>Tier-Based</p>
+                <p></p>
+                <p>Category ..................... : 02.01</p>
+                <p>Path Operation</p>
+                <p>................................. VOYAGER</p>
+                <p></p>
+                <p>Fig .............: B</p>
+                <p></p>
+                <p></p>
+                <p>Alg ............ :</p>
+                <p>POS Intersections.. : B1, B2, B3</p>
+                <p>Form ......... : B123</p>
+              </article>
 
-          <article>
-            <a href="./form.html"
-              ><img src="./img/card-36.jpg" alt="Clickable Image"
-            /></a>
-            <h2>Tier .............: B”</h2>
-            <img src="./img/barcode.png" alt="barcode" />
-            <p>Country variation : Argentina, Brazil, Chile, Malaysia, UAE</p>
-            <p></p>
-            <p></p>
-            <p>Access ........ : Some legal rights</p>
-            <p>..................... : Expedited bureaucracy</p>
-            <p></p>
-            <p>System ........................ : 02</p>
-            <p>Tier-Based</p>
-            <p></p>
-            <p>Category ..................... : 02.01</p>
-            <p>Path Operation</p>
-            <p>................................. VOYAGER</p>
-            <p></p>
-            <p>Fig .............: B</p>
-            <p></p>
-            <p></p>
-            <p>Alg ............ :</p>
-            <p>POS Intersections.. : B1, B2, B3</p>
-            <p>Form ......... : B123</p>
-          </article>
+              <article>
+                <h2>Tier .............: B2-L</h2>
+                <img src="./img/barcode.png" alt="barcode" />
+                <p>
+                  Country variation : South Korea, Portugal, New Zealand,
+                  Israel, USA
+                </p>
+                <p></p>
+                <p></p>
+                <p>Access ........ : Lifetime residency</p>
+                <p>
+                  ..................... : Continuous access to all Tier B
+                  benefits
+                </p>
+                <p></p>
+                <p>System ........................ : 02</p>
+                <p>Tier-Based</p>
+                <p></p>
+                <p>Category ..................... : 02.02</p>
+                <p>Path Operation</p>
+                <p>................................. LEGACY</p>
+                <p></p>
+                <p>Fig .............: B2-L</p>
+                <p></p>
+                <p></p>
+                <p>Alg ............ :</p>
+                <p>POS Intersections.. : B1, B2, B3, B4</p>
+                <p>Form ......... : B1234</p>
+                <a href="./form.html"
+                  ><picture>
+                    <source
+                      srcset="./img/card-3m-mobile.png"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./img/card-3m.png"
+                      alt="Click to go to 3M plan"
+                    /> </picture
+                ></a>
+              </article>
 
-          <article>
-            <h2>Tier .............: B2-L</h2>
-            <img src="./img/barcode.png" alt="barcode" />
-            <p>
-              Country variation : South Korea, Portugal, New Zealand, Israel,
-              USA
-            </p>
-            <p></p>
-            <p></p>
-            <p>Access ........ : Lifetime residency</p>
-            <p>
-              ..................... : Continuous access to all Tier B benefits
-            </p>
-            <p></p>
-            <p>System ........................ : 02</p>
-            <p>Tier-Based</p>
-            <p></p>
-            <p>Category ..................... : 02.02</p>
-            <p>Path Operation</p>
-            <p>................................. LEGACY</p>
-            <p></p>
-            <p>Fig .............: B2-L</p>
-            <p></p>
-            <p></p>
-            <p>Alg ............ :</p>
-            <p>POS Intersections.. : B1, B2, B3, B4</p>
-            <p>Form ......... : B1234</p>
-            <a href="./form.html"
-              ><img src="./img/card-3m.jpg" alt="$3m plan"
-            /></a>
-          </article>
-
-          <article>
-            <a href="./form.html"
-              ><img src="./img/card-75.jpg" alt="$75 plan"
-            /></a>
-            <h2>Tier .............: C</h2>
-            <img src="./img/barcode.png" alt="barcode" />
-            <p>
-              Country variation : Germany, Japan, Canada, Switzerland,
-              Singapore.
-            </p>
-            <p></p>
-            <p></p>
-            <p>Access ........ : Extended legal rights</p>
-            <p>..................... : Priority access to local benefits</p>
-            <p></p>
-            <p>System ........................ : 03</p>
-            <p>Tier-Based</p>
-            <p></p>
-            <p>Category ..................... : 03.01</p>
-            <p>Path Operation</p>
-            <p>................................. PIONEER</p>
-            <p></p>
-            <p>Fig .............: C</p>
-            <p></p>
-            <p></p>
-            <p>Alg ............ :</p>
-            <p>POS Intersections.. : C1, C2, C3, C4</p>
-            <p>Form ......... : C1234</p>
-            <a href="./form.html"
-              ><img src="./img/card-3m.jpg" alt="$3m plan"
-            /></a>
-          </article>
+              <article>
+                <a href="./form.html"></a>
+                <h2>Tier .............: C</h2>
+                <img src="./img/barcode.png" alt="barcode" />
+                <p>
+                  Country variation : Germany, Japan, Canada, Switzerland,
+                  Singapore.
+                </p>
+                <p></p>
+                <p></p>
+                <p>Access ........ : Extended legal rights</p>
+                <p>..................... : Priority access to local benefits</p>
+                <p></p>
+                <p>System ........................ : 03</p>
+                <p>Tier-Based</p>
+                <p></p>
+                <p>Category ..................... : 03.01</p>
+                <p>Path Operation</p>
+                <p>................................. PIONEER</p>
+                <p></p>
+                <p>Fig .............: C</p>
+                <p></p>
+                <p></p>
+                <p>Alg ............ :</p>
+                <p>POS Intersections.. : C1, C2, C3, C4</p>
+                <p>Form ......... : C1234</p>
+                <a href="./form.html"
+                  ><picture>
+                    <source
+                      srcset="./img/card-75-mobile.png"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./img/card-75.png"
+                      alt="Click to go to $75 Daily Plan"
+                    /> </picture
+                ></a>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -236,6 +283,9 @@
       <div>
         <div>
           <img src="./img/logo.svg" alt="Omnipass Logo" />
+          <div>
+            <img src="./img/certification.png" alr="Certification" />
+          </div>
           <h1>Contact</h1>
           <h2>Global Hotline:</h2>
           <a href="tel:+18005556664"> +1-800-555-OMNI (6664) </a>
@@ -244,20 +294,15 @@
           <h4>OmniPass Global Mobility Services</h4>
           <p>777 Horizon Drive, Suite 100</p>
           <p>Metropolis, NY 10101 United States</p>
-          <h2>Prefer sending an email?</h2>
+
           <div>
-            <a href="mailto:anamosquera@gmail.com">Email</a>
+            <a href="mailto:anamosquera@gmail.com" class="primary"
+              >Send Email</a
+            >
           </div>
           <a href="#header">Return</a>
         </div>
-        <div>
-          <img src="./img/certification.jpg" alr="Certification" />
-        </div>
-        <div>
-          <a href="./terms.html" target="_blank"
-            >Terms of Service, Privacy Policy</a
-          >
-        </div>
+
         <div>
           <!--Social Media Layout and Placeholders-->
 
@@ -314,6 +359,11 @@
               </g>
             </svg>
           </a>
+        </div>
+        <div>
+          <a href="./terms.html" target="_blank"
+            >Terms of Service, Privacy Policy</a
+          >
         </div>
       </div>
     </footer>
