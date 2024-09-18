@@ -1,10 +1,51 @@
-h1 {
-    font-size: 32px;
-    font-weight: 700px;
-    color: rgb(0, 0, 0);
+body{ 
+  font-family: "Inter", sans-serif;
+ 
+  font-optical-sizing: auto;
+  
+  img {
+    width: 100%;
+  }
+a{
+  color: black;
+  text-decoration: none;
 }
-h2 {
-    font-size: 24px;
-    font-weight: 300px;
+a:hover{
+  color: #E54646
+}
+a:focus{
+  outline: 2px solid #E54646 
+}
+
+  h1 {
+      font-size: 32px;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+  }
+  h2 {
+      font-size: 24px;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+  }
+  h3{
+    font-family:"Libre Barcode 128 Text";
+    font-size: 3rem;
+    font-weight: normal;
     color: rgb(0, 0, 0);
+
+}
+  p{
+      font-size: 18px;
+      font-weight: normal;
+      color: rgb(0, 0, 0);
+  }
+  h5{
+      font-size: 24px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      background-color: #E54646
+
+  }
+
+  
 }
