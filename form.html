@@ -25,8 +25,8 @@
   </head>
 
   <body>
-    <!-- Header  -->
-    <header id="header">
+    <!-- Header 
+    <header class="header">
       <a href="./index.html"
         ><img src="./img/logo.svg" alt="Omnipass Logo"
       /></a>
@@ -37,159 +37,178 @@
           <li><a href="#footer">Contact</a></li>
         </ul>
       </nav>
-    </header>
+    </header> -->
 
     <!-- Content -->
-    <main>
-      <picture>
-        <source
-          srcset="./img/stock-market-ticker-600x40.jpg"
-          media="(max-width:767px)"
-        />
-        <img src="./img/stock-market-ticker.jpg" />
-      </picture>
-      <h2>Form</h2>
-      <h1>Fill in the information below before proceeding to payment.</h1>
-
-      <form action="payment.html" method="POST">
-        <!-- Step 1: Personal Information -->
-        <section>
-          <h2>Step 1: Personal Information</h2>
-          <label for="fullName"
-            >Full Name: <span>(As known to verifiers)</span></label
-          >
-          <input type="text" id="fullName" name="fullName" required />
-
-          <label for="dob"
-            >Date of Birth: <span>(As known to verifiers)</span></label
-          >
-          <input type="date" id="dob" name="dob" required />
-
-          <label for="ipAddress"
-            >Most Recent IP Address:
-            <span>(Auto-populated by network provider)</span></label
-          >
-          <input
-            type="text"
-            id="ipAddress"
-            name="ipAddress"
-            value="136.28.70.09"
-            readonly
+    <main class="form">
+      <section class="form">
+        <picture>
+          <source
+            srcset="./img/stock-market-ticker-600x40.jpg"
+            media="(max-width:767px)"
           />
-        </section>
+          <img src="./img/stock-market-ticker.jpg" />
+        </picture>
+        <h1>Form</h1>
+        <h2>Fill in the information below before proceeding to payment.</h2>
 
-        <!-- Step 2: Select Your Bundle -->
-        <section>
-          <h2>Step 2: Select Your Bundle</h2>
-          <label for="subscription"
-            >Choose the duration of your subscription:</label
-          >
-          <select id="subscription" name="subscription" required>
-            <option value="1day">1 Day</option>
-            <option value="7days">7 Days</option>
-            <option value="14days">2 Weeks</option>
-            <option value="1month">1 Month</option>
-          </select>
-        </section>
+        <form action="payment.html" method="POST">
+          <!-- Step 1: Personal Information -->
+          <section>
+            <h2>Step 1: Personal Information</h2>
+            <label for="fullName"
+              >Full Name: <span>(As known to verifiers)</span></label
+            >
+            <input type="text" id="fullName" name="fullName" required />
 
-        <!-- Step 3: Verifier Information -->
-        <section>
-          <h2>Step 3: Verifier Information</h2>
+            <label for="dob"
+              >Date of Birth: <span>(As known to verifiers)</span></label
+            >
+            <input type="date" id="dob" name="dob" required />
 
-          <label for="verifier1"
-            >Verifier 1 Full Name:
-            <span
-              >(Type entity name; system auto-verifies from database)</span
-            ></label
-          >
-          <input type="text" id="verifier1" name="verifier1" required />
-          <label
-            ><input type="radio" name="verifier1Type" value="human" required />
-            Human</label
-          >
-          <label
-            ><input
-              type="radio"
-              name="verifier1Type"
-              value="nonhuman"
-              required
+            <label for="ipAddress"
+              >Most Recent IP Address:
+              <span>(Auto-populated by network provider)</span></label
+            >
+            <input
+              type="text"
+              id="ipAddress"
+              name="ipAddress"
+              value="136.28.70.09"
+              readonly
             />
-            Non-Human</label
-          >
-          <p>Verified: <span id="verifier1Verified">Yes/No</span></p>
+          </section>
 
-          <label for="verifier2"
-            >Verifier 2 Full Name:
-            <span
-              >(Type entity name; system auto-verifies from database)</span
-            ></label
-          >
-          <input type="text" id="verifier2" name="verifier2" />
-          <label
-            ><input type="radio" name="verifier2Type" value="human" />
-            Human</label
-          >
-          <label
-            ><input type="radio" name="verifier2Type" value="nonhuman" />
-            Non-Human</label
-          >
-          <p>Verified: <span id="verifier2Verified">Yes/No</span></p>
-        </section>
+          <!-- Step 2: Select Your Bundle -->
+          <section>
+            <h2>Step 2: Select Your Bundle</h2>
+            <label for="subscription"
+              >Choose the duration of your subscription:</label
+            >
+            <select id="subscription" name="subscription" required>
+              <option value="1day">1 Day</option>
+              <option value="7days">7 Days</option>
+              <option value="14days">2 Weeks</option>
+              <option value="1month">1 Month</option>
+            </select>
+          </section>
 
-        <!-- Step 4: Agreement to Terms -->
-        <section>
-          <h2>Step 4: Agreement to Terms</h2>
-          <p>
-            By proceeding to payment, I confirm that my identity has been
-            verified by the above entities, and the information provided is
-            accurate.
-          </p>
-          <label>
-            <input type="checkbox" name="terms" required />
-            I agree to the terms and conditions
-          </label>
-        </section>
+          <!-- Step 3: Verifier Information -->
+          <section>
+            <h2>Step 3: Verifier Information</h2>
 
-        <!-- Call to Action -->
-        <ul>
-          <li>
-            <a href="#">Proceed to Payment</a>
-          </li>
-          <li>
-            <a href="./files/card-compressed.pdf">See Active Card</a>
-          </li>
-        </ul>
-      </form>
+            <label for="verifier1"
+              >Verifier 1 Full Name:
+              <span
+                >(Type entity name; system auto-verifies from database)</span
+              ></label
+            >
+            <input type="text" id="verifier1" name="verifier1" required />
+            <label
+              ><input
+                type="radio"
+                name="verifier1Type"
+                value="human"
+                required
+              />
+              Human</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="verifier1Type"
+                value="nonhuman"
+                required
+              />
+              Non-Human</label
+            >
+            <p>Verified: <span id="verifier1Verified">Yes/No</span></p>
+
+            <label for="verifier2"
+              >Verifier 2 Full Name:
+              <span
+                >(Type entity name; system auto-verifies from database)</span
+              ></label
+            >
+            <input type="text" id="verifier2" name="verifier2" />
+            <label
+              ><input type="radio" name="verifier2Type" value="human" />
+              Human</label
+            >
+            <label
+              ><input type="radio" name="verifier2Type" value="nonhuman" />
+              Non-Human</label
+            >
+            <p>Verified: <span id="verifier2Verified">Yes/No</span></p>
+          </section>
+
+          <!-- Step 4: Agreement to Terms -->
+          <section>
+            <h2>Step 4: Agreement to Terms</h2>
+            <p>
+              By proceeding to payment, I confirm that my identity has been
+              verified by the above entities, and the information provided is
+              accurate.
+            </p>
+            <label>
+              <input type="checkbox" name="terms" required />
+              I agree to the terms and conditions
+            </label>
+            <div>
+              <button class="primary" onclick="location.href='#'">
+                Proceed to Payment
+              </button>
+            </div>
+            <div>
+              <button
+                class="secondary"
+                onclick="location.href='./files/card-compressed.pdf'"
+              >
+                See Active Card
+              </button>
+            </div>
+          </section>
+
+          <!-- Call to Action -->
+          <ul>
+            <li>
+              <a href="#">Proceed to Payment</a>
+            </li>
+            <li>
+              <a href="./files/card-compressed.pdf">See Active Card</a>
+            </li>
+          </ul>
+        </form>
+      </section>
     </main>
-    <!-- Footer  -->
-    <!-- Footer  -->
+
+    <!-- Footer 
     <footer id="footer">
       <div>
         <div>
           <img src="./img/logo.svg" alt="Omnipass Logo" />
+          <div>
+            <img src="./img/certification.png" alr="Certification" />
+          </div>
           <h1>Contact</h1>
           <h2>Global Hotline:</h2>
-          <a href="tel:+18005556664"> +1-800-555-OMNI (6664) Available 24/7</a>
-          <h3>Headquarters Address:</h3>
+          <a href="tel:+18005556664"> +1-800-555-OMNI (6664) </a>
+          <p>Available 24/7</p>
+          <h2>Headquarters Address:</h2>
           <h4>OmniPass Global Mobility Services</h4>
           <p>777 Horizon Drive, Suite 100</p>
           <p>Metropolis, NY 10101 United States</p>
-          <h2>Prefer sending an email?</h2>
+
           <div>
-            <a href="mailto:anamosquera@gmail.com">Email</a>
+            <a href="mailto:anamosquera@gmail.com" class="primary"
+              >Send Email</a
+            >
           </div>
           <a href="#header">Return</a>
         </div>
-        <div>
-          <img src="./img/certification.jpg" alr="Certification" />
-        </div>
-        <div>
-          <a href="./terms.html" target="_blank"
-            >Terms of Service, Privacy Policy</a
-          >
-        </div>
-        <div>
-          <!--Social Media Layout and Placeholders-->
+
+        <div> -->
+    <!--Social Media Layout and Placeholders
 
           <a
             href="https://www.linkedin.com/in/anamosqueraduran/"
@@ -245,7 +264,12 @@
             </svg>
           </a>
         </div>
+        <div>
+          <a href="./terms.html" target="_blank"
+            >Terms of Service, Privacy Policy</a
+          >
+        </div>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>

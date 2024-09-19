@@ -8,15 +8,18 @@ Red: #E54646
 */
 
 body {
-  
+
   background-color: white;
   font-family: "Inter", sans-serif;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.6;
-  
 
-  h1, h2, h3, h4 {
+
+  h1,
+  h2,
+  h3,
+  h4 {
     line-height: 1.4;
   }
 
@@ -27,7 +30,7 @@ body {
   }
 
   h2 {
-    font-size: 1.35px;
+    font-size: 1.35em;
     font-weight: bold;
     color: #000011;
   }
@@ -45,28 +48,46 @@ body {
     font-weight: normal;
     color: #000011;
   }
-.header{
-  background-color: white;
-}
+/*Sections*/
+  /*header*/
+  .header {
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    position: fixed;
+    width: 100%;
+  }
 
   .info {
     background-color: #F3F2F2;
   }
 
-  .prices{
+  .prices {
     background-color: #000011;
-    color:white;
+    color: white;
   }
 
+  .prices h1,
+  .prices h2,
+  .prices p {
+    color: white;
+  }
 
-.prices h1 ,
-.prices h2,
-.prices p { color: white;}
+  .footer{
+    background-color: #F3F2F2;
+  }
 
-  
+  .form{
+    background-color: #000011;
+    color: white;
+  }
 
- 
-
+  .form h1,
+  .form h2,
+  .form p {
+    color: white;
+  }
+/*Button*/
   button {
 
     font-size: 24px;
@@ -77,28 +98,28 @@ body {
   .primary {
     font-size: 24px;
     font-weight: bold;
+    color: white;
     padding: 10px 20px;
     background-color: #E54646;
-    color: white;
     border: 2px solid #E54646;
   }
 
   .secondary {
     background-color: transparent;
     color: white;
-    border: 2px solid #000000;
+    border: 2px solid white;
   }
 
   button:hover {
 
-    background-color: white;
-    color: #E54646;
+    background-color: transparent;
+    color: white;
     border: 2px solid #E54646;
 
   }
 
   button:active {
-    background-color: #994c30;
+    background-color: #ab3636;
   }
 
   button:focus {
@@ -116,7 +137,8 @@ body {
   }
 
   a:hover {
-    color: #E54646;
+    color: black;
+    text-decoration: underline;
 
   }
 
