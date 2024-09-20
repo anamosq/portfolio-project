@@ -7,153 +7,166 @@ Red: #E54646
 
 */
 
-body {
 
+body {
   background-color: white;
   font-family: "Inter", sans-serif;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.6;
+}
 
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.4;
+}
 
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1.4;
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #000011;
+}
+
+h2 {
+  font-size: 1.35em;
+  font-weight: bold;
+  color: #000011;
+}
+
+h3 {
+  font-family: "Libre Barcode 128 Text";
+  font-size: 4rem;
+  font-weight: normal;
+  color: #000011;
+  margin: 0;
+}
+
+p {
+  font-size: 1em;
+  font-weight: normal;
+  color: #000011;
+}
+
+img {
+  width: 100%;
+}
+
+.logo {
+  max-width: 245px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: auto;
   }
-
-  h1 {
-    font-size: 2em;
-    font-weight: bold;
-    color: #000011;
-  }
-
-  h2 {
-    font-size: 1.35em;
-    font-weight: bold;
-    color: #000011;
-  }
-
-  h3 {
-    font-family: "Libre Barcode 128 Text";
-    font-size: 4rem;
-    font-weight: normal;
-    color: #000011;
-
-  }
-
-  p {
-    font-size: 1em;
-    font-weight: normal;
-    color: #000011;
-  }
+}
 /*Sections*/
-  /*header*/
-  .header {
-    background-color: white;
-    padding: 10px;
-    margin: auto;
-    position: fixed;
-    width: 100%;
-  }
+/*header*/
+.header {
+  background-color: white;
+  padding: 10px;
+  margin: auto;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
 
-  .info {
-    background-color: #F3F2F2;
-  }
-
-  .prices {
-    background-color: #000011;
-    color: white;
-  }
-
-  .prices h1,
-  .prices h2,
-  .prices p {
-    color: white;
-  }
-
-  .footer{
-    background-color: #F3F2F2;
-  }
-
-  .form{
-    background-color: #000011;
-    color: white;
-  }
-
-  .form h1,
-  .form h2,
-  .form p {
-    color: white;
-  }
-/*Button*/
-  button {
-
-    font-size: 24px;
-    font-weight: bold;
-    padding: 10px 20px;
-  }
-
-  .primary {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    padding: 10px 20px;
-    background-color: #E54646;
-    border: 2px solid #E54646;
-  }
-
-  .secondary {
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-  }
-
-  button:hover {
-
-    background-color: transparent;
-    color: white;
-    border: 2px solid #E54646;
-
-  }
-
-  button:active {
-    background-color: #ab3636;
-  }
-
-  button:focus {
-    border: 2px solid #E54646
-  }
-
-  a {
-    color: black;
-    text-decoration: none;
-  }
-
-  a:visited {
-    /* visited link */
-    color: #000000;
-  }
-
-  a:hover {
-    color: black;
-    text-decoration: underline;
-
-  }
-
-  a:active {
-    /* selected link */
-    color: #c22727;
-  }
-
-  a:focus {
-    outline: 2px solid #E54646
-  }
-
-
-
-
-
+.hero-content {
+  position: absolute;
+  top: 40%;
+  left: 7%;
 
 }
+
+.info {
+  background-color: #f3f2f2;
+}
+
+.prices {
+  background-color: #000011;
+  color: white;
+}
+
+.prices h1,
+.prices h2,
+.prices p {
+  color: white;
+}
+
+.footer {
+  background-color: #f3f2f2;
+}
+
+.form {
+  background-color: #000011;
+  color: white;
+}
+
+.form h1,
+.form h2,
+.form p {
+  color: white;
+}
+/*Button*/
+button {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.primary {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  padding: 10px 20px;
+  background-color: #e54646;
+  border: 2px solid #e54646;
+}
+
+.secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+button:hover {
+  background-color: transparent;
+  color: #E54646;
+  border: 2px solid #e54646;
+}
+
+button:active {
+  background-color: #ab3636;
+}
+
+button:focus {
+  border: 2px solid #e54646;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  /* visited link */
+  color: #000000;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+a:active {
+  /* selected link */
+  color: #c22727;
+}
+
+a:focus {
+  outline: 2px solid #e54646;
+}
+
