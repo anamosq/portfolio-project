@@ -26,13 +26,15 @@
 
   <body>
     <!-- Header  -->
+    <!-- Header  -->
     <header class="header">
-      <div>
+      <div class="container">
         <div class="logo">
           <a href="./index.html"
             ><img src="./img/logo.svg" alt="Omnipass Logo"
           /></a>
         </div>
+
         <nav class="nav">
           <ul>
             <li><a href="./about.html">About</a></li>
@@ -45,84 +47,125 @@
 
     <!-- Content -->
     <main>
-      <!-- Banner -->
-      <div class="banner">
-        <picture>
-          <source srcset="./img/banner-600x240.jpg" media="(max-width:767px)" />
-          <img src="./img/banner.jpg" />
-        </picture>
-        <div class="hero content">
-          <h2>Our Serivices</h2>
+      <!--Hero -->
+
+      <div class="hero">
+        <div class="hero-img">
+          <picture class="hero-img">
+            <source
+              srcset="./img/banner-mobile.jpg"
+              media="(max-width:767px)"
+            />
+            <img class="hero-img" src="./img/banner.jpg" alt="Hero Image" />
+          </picture>
         </div>
-        <picture>
-          <source
-            srcset="./img/stock-market-ticker-600x40.jpg"
-            media="(max-width:767px)"
-          />
-          <img src="./img/stock-market-ticker.jpg" />
-        </picture>
+
+        <div class="hero-content">
+          <div class="banner">
+            <h2 id="banner-color">Our Services</h2>
+          </div>
+        </div>
+
+        <div class="stock-ticker">
+          <picture class="stock-ticker">
+            <source
+              srcset="./img/stock-market-ticker-mobile.jpg"
+              media="(max-width:767px)"
+            />
+            <img
+              class="stock-ticker"
+              src="./img/stock-market-ticker.jpg"
+              alt="Stock Market Ticker"
+            />
+          </picture>
+        </div>
       </div>
 
       <!-- About Info section -->
-      <div class="about">
-        <div>
-          <p>
-            OmniPass is the world's first subscription-based service for global
-            mobility, designed to provide flexible citizenship options for those
-            seeking freedom beyond borders. With tiered plans tailored to meet
-            the needs of digital nomads, expatriates, refugees, and individuals
-            navigating political or economic instability, OmniPass simplifies
-            the process of acquiring temporary citizenship. Developed in
-            response to increasing global demand for flexible residency options,
-            OmniPass was launched by a team of experts in digital identity and
-            mobility solutions. Recognizing that traditional paths to
-            citizenship were restrictive and slow, the creators of OmniPass set
-            out to build a streamlined, subscription-based system that would
-            allow users to access the benefits of citizenship without the
-            long-term commitments. In a world where national borders still exist
-            but opportunities for movement are restricted, OmniPass offers a
-            seamless, efficient solution to navigating global mobility. Powered
-            by innovative technology, OmniPass enables users to subscribe to
-            different nationalities, granting you access to local services,
-            legal protections, and cultural experiences. With OmniPass, you have
-            the flexibility and autonomy to choose where to call home—on your
-            own terms.
-          </p>
-        </div>
-        <div class="land photo">
-          <img
-            src="./img/side-img.jpg"
-            alt="black and white photo of terrain"
-          />
+      <div id="about">
+        <div class="container">
+          <picture class="land-photo">
+            <source
+              srcset="./img/side-img-desktop.jpg"
+              media="(max-width:767px)"
+            />
+            <img
+              class="side-img"
+              src="./img/side-img.jpg"
+              alt="Photograph of land seen from above"
+            />
+          </picture>
+
+          <div class="about-content">
+            <p>
+              OmniPass is the world's first subscription-based service for
+              global mobility, designed to provide flexible citizenship options
+              for those seeking freedom beyond borders. With tiered plans
+              tailored to meet the needs of digital nomads, expatriates,
+              refugees, and individuals navigating political or economic
+              instability, OmniPass simplifies the process of acquiring
+              temporary citizenship.
+            </p>
+            <p>
+              <spam id="bold">
+                Developed in response to increasing global demand for flexible
+                residency options,</spam
+              >
+              OmniPass was launched by a team of experts in digital identity and
+              mobility solutions. Recognizing that traditional paths to
+              citizenship were restrictive and slow, the creators of OmniPass
+              set out to build a streamlined, subscription-based system that
+              would allow users to access the benefits of citizenship without
+              the long-term commitments.
+            </p>
+            <p>
+              In a world where national borders still exist but opportunities
+              for movement are restricted, OmniPass offers a seamless, efficient
+              solution to navigating global mobility.
+            </p>
+            <p>
+              Powered by innovative technology, OmniPass enables users to
+              subscribe to different nationalities, granting you access to local
+              services, legal protections, and cultural experiences. With
+              OmniPass, you have the flexibility and autonomy to choose where to
+              call home—on your own terms.
+            </p>
+          </div>
         </div>
       </div>
     </main>
     <!-- Footer  -->
-    <footer id="footer">
-      <div>
-        <div>
-          <img src="./img/logo.svg" alt="Omnipass Logo" />
-          <div>
-            <img src="./img/certification.png" alr="Certification" />
+    <footer>
+      <div id="footer">
+        <div class="footer">
+          <div class="row">
+            <img src="./img/logo.svg" alt="Omnipass Logo" class="logo-footer" />
+            <div class="cert-footer">
+              <img
+                class="cert-footer"
+                src="./img/certification.png"
+                alr="Certification"
+              />
+            </div>
           </div>
+        </div>
+
+        <div class="contact">
           <h1>Contact</h1>
           <h2>Global Hotline:</h2>
           <a href="tel:+18005556664"> +1-800-555-OMNI (6664) </a>
           <p>Available 24/7</p>
           <h2>Headquarters Address:</h2>
-          <h4>OmniPass Global Mobility Services</h4>
+          <h5>OmniPass Global Mobility Services</h5>
           <p>777 Horizon Drive, Suite 100</p>
           <p>Metropolis, NY 10101 United States</p>
-
-          <div>
-            <a href="mailto:anamosquera@gmail.com" class="primary"
-              >Send Email</a
-            >
-          </div>
-          <a href="#header">Return</a>
         </div>
 
-        <div>
+        <div class="contact-button">
+          <a href="mailto:anamosquera@gmail.com" class="primary">Send Email</a>
+        </div>
+
+        <div class="social">
           <!--Social Media Layout and Placeholders-->
 
           <a
@@ -179,7 +222,8 @@
             </svg>
           </a>
         </div>
-        <div>
+
+        <div class="terms">
           <a href="./terms.html" target="_blank"
             >Terms of Service, Privacy Policy</a
           >

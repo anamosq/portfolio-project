@@ -22,6 +22,13 @@
       rel="stylesheet"
     />
     <link href="./img/favicon.png" rel="shortcut icon" />
+    <!-- Include Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <!-- Include Flatpickr JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   </head>
 
   <body>
@@ -41,144 +48,183 @@
 
     <!-- Content -->
     <main class="form">
-      <section class="form">
-        <picture>
-          <source
-            srcset="./img/stock-market-ticker-600x40.jpg"
-            media="(max-width:767px)"
-          />
-          <img src="./img/stock-market-ticker.jpg" />
-        </picture>
-        <h1>Form</h1>
-        <h2>Fill in the information below before proceeding to payment.</h2>
-
-        <form action="payment.html" method="POST">
-          <!-- Step 1: Personal Information -->
-          <section>
-            <h2>Step 1: Personal Information</h2>
-            <label for="fullName"
-              >Full Name: <span>(As known to verifiers)</span></label
-            >
-            <input type="text" id="fullName" name="fullName" required />
-
-            <label for="dob"
-              >Date of Birth: <span>(As known to verifiers)</span></label
-            >
-            <input type="date" id="dob" name="dob" required />
-
-            <label for="ipAddress"
-              >Most Recent IP Address:
-              <span>(Auto-populated by network provider)</span></label
-            >
-            <input
-              type="text"
-              id="ipAddress"
-              name="ipAddress"
-              value="136.28.70.09"
-              readonly
+      <section class="form-container">
+        <div class="stock-ticker">
+          <picture class="stock-ticker">
+            <source
+              srcset="./img/stock-market-ticker-mobile.jpg"
+              media="(max-width:767px)"
             />
-          </section>
+            <img
+              class="stock-ticker"
+              src="./img/stock-market-ticker.jpg"
+              alt="Stock Market Ticker"
+            />
+          </picture>
+        </div>
+        <div id="form-head">
+          <div class="form-title">
+            <div class="row-form">
+              <h1>Form</h1>
 
-          <!-- Step 2: Select Your Bundle -->
-          <section>
-            <h2>Step 2: Select Your Bundle</h2>
-            <label for="subscription"
-              >Choose the duration of your subscription:</label
-            >
-            <select id="subscription" name="subscription" required>
-              <option value="1day">1 Day</option>
-              <option value="7days">7 Days</option>
-              <option value="14days">2 Weeks</option>
-              <option value="1month">1 Month</option>
-            </select>
-          </section>
-
-          <!-- Step 3: Verifier Information -->
-          <section>
-            <h2>Step 3: Verifier Information</h2>
-
-            <label for="verifier1"
-              >Verifier 1 Full Name:
-              <span
-                >(Type entity name; system auto-verifies from database)</span
-              ></label
-            >
-            <input type="text" id="verifier1" name="verifier1" required />
-            <label
-              ><input
-                type="radio"
-                name="verifier1Type"
-                value="human"
-                required
-              />
-              Human</label
-            >
-            <label
-              ><input
-                type="radio"
-                name="verifier1Type"
-                value="nonhuman"
-                required
-              />
-              Non-Human</label
-            >
-            <p>Verified: <span id="verifier1Verified">Yes/No</span></p>
-
-            <label for="verifier2"
-              >Verifier 2 Full Name:
-              <span
-                >(Type entity name; system auto-verifies from database)</span
-              ></label
-            >
-            <input type="text" id="verifier2" name="verifier2" />
-            <label
-              ><input type="radio" name="verifier2Type" value="human" />
-              Human</label
-            >
-            <label
-              ><input type="radio" name="verifier2Type" value="nonhuman" />
-              Non-Human</label
-            >
-            <p>Verified: <span id="verifier2Verified">Yes/No</span></p>
-          </section>
-
-          <!-- Step 4: Agreement to Terms -->
-          <section>
-            <h2>Step 4: Agreement to Terms</h2>
-            <p>
-              By proceeding to payment, I confirm that my identity has been
-              verified by the above entities, and the information provided is
-              accurate.
-            </p>
-            <label>
-              <input type="checkbox" name="terms" required />
-              I agree to the terms and conditions
-            </label>
-            <div>
-              <button class="primary" onclick="location.href='#'">
-                Proceed to Payment
-              </button>
+              <div class="close-icon">
+                <a href="./index.html">
+                  <img
+                    src="./img/close-icon.png"
+                    alt="Click to return to main page"
+                  />
+                </a>
+              </div>
             </div>
-            <div>
-              <button
-                class="secondary"
-                onclick="location.href='./files/card-compressed.pdf'"
+            <p>Fill in the information below before proceeding to payment.</p>
+          </div>
+        </div>
+
+        <div class="form-content">
+          <form action="payment.html" method="POST">
+            <!-- Step 1: Personal Information -->
+            <section class="personal-info">
+              <h2>Step 1: Personal Information</h2>
+
+              <!-- Full Name Input -->
+              <label for="fullName">
+                <p class="input-label">What name do your verifiers call you?</p>
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Input"
+                    required
+                  />
+                  <span class="placeholder-custom">Full Name</span>
+                </div>
+                <p class="note">(As known to verifiers)</p>
+              </label>
+
+              <!-- Date of Birth Input -->
+              <label for="dob">
+                <p class="input-label">
+                  What date do verifiers know as your birth day?
+                </p>
+                <div class="input-wrapper">
+                  <input type="date" id="dob" name="dob" required />
+                  <span class="placeholder-custom">Date of Birth</span>
+                </div>
+                <p class="note">(As known to verifiers)</p>
+              </label>
+
+              <!-- IP Address Input -->
+              <label for="ipAddress">
+                <p class="input-label">What was your last know IP address?</p>
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    id="ipAddress"
+                    name="ipAddress"
+                    value="136.28.70.09"
+                    readonly
+                  />
+                  <span class="placeholder-custom">IP Address</span>
+                </div>
+                <p class="note">(Auto-populated by network provider)</p>
+              </label>
+            </section>
+
+            <!-- Step 2: Select Your Bundle -->
+            <section class="bundle">
+              <h2>Step 2: Select Your Bundle</h2>
+              <label for="subscription"
+                >Choose the duration of your subscription:</label
               >
-                See Active Card
-              </button>
-            </div>
-          </section>
+              <select id="subscription" name="subscription" required>
+                <option value="1day">1 Day</option>
+                <option value="7days">7 Days</option>
+                <option value="14days">2 Weeks</option>
+                <option value="1month">1 Month</option>
+              </select>
+            </section>
 
-          <!-- Call to Action -->
-          <ul>
-            <li>
-              <a href="#">Proceed to Payment</a>
-            </li>
-            <li>
-              <a href="./files/card-compressed.pdf">See Active Card</a>
-            </li>
-          </ul>
-        </form>
+            <!-- Step 3: Verifier Information -->
+            <section class="verifiers">
+              <h2>Step 3: Verifier Information</h2>
+
+              <label for="verifier1"
+                >Verifier 1 Full Name:
+                <span
+                  >(Type entity name; system auto-verifies from database)</span
+                ></label
+              >
+              <input type="text" id="verifier1" name="verifier1" required />
+              <label
+                ><input
+                  type="radio"
+                  name="verifier1Type"
+                  value="human"
+                  required
+                />
+                Human</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="verifier1Type"
+                  value="nonhuman"
+                  required
+                />
+                Non-Human</label
+              >
+              <p>Verified: <span id="verifier1Verified">Yes/No</span></p>
+
+              <label for="verifier2"
+                >Verifier 2 Full Name:
+                <span
+                  >(Type entity name; system auto-verifies from database)</span
+                ></label
+              >
+              <input type="text" id="verifier2" name="verifier2" />
+              <label
+                ><input type="radio" name="verifier2Type" value="human" />
+                Human</label
+              >
+              <label
+                ><input type="radio" name="verifier2Type" value="nonhuman" />
+                Non-Human</label
+              >
+              <p>Verified: <span id="verifier2Verified">Yes/No</span></p>
+            </section>
+
+            <!-- Step 4: Agreement to Terms -->
+            <section class="terms">
+              <h2>Step 4: Agreement to Terms</h2>
+              <p>
+                By proceeding to payment, I confirm that my identity has been
+                verified by the above entities, and the information provided is
+                accurate.
+              </p>
+              <label>
+                <input type="checkbox" name="terms" required />
+                I agree to the terms and conditions
+              </label>
+            </section>
+          </form>
+        </div>
+      </section>
+
+      <section id="call-action">
+        <div class="payment-cta">
+          <button class="primary" onclick="location.href='#'">
+            Proceed to Payment
+          </button>
+        </div>
+        <div class="ref-cta">
+          <button
+            class="secondary"
+            onclick="location.href='./files/card-compressed.pdf'"
+          >
+            See Active Card
+          </button>
+        </div>
       </section>
     </main>
 
