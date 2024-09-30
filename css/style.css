@@ -169,15 +169,6 @@ img {
   padding: 0;
   border: 0;
 }
-
-.stock-ticker {
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-/* Base styling for hero content */
 .hero-content {
   display: inline-block;
   width: 100%;
@@ -189,6 +180,58 @@ img {
   text-align: left;
   color: white;
 }
+
+/*.stock-ticker{
+display: block;
+margin: 0;
+padding: 0;
+border: 0;
+}*/
+
+.animated-ticker{
+margin: 0;
+padding: 0;
+width: 100%;
+max-width: 100%;
+min-height: 20%;
+background-color: #000011;
+}
+
+@keyframes moveLoop {
+  0% {
+    transform: translateX(100%);
+    opacity: 0; /* Hidden before animation starts */
+  }
+
+  10% {
+    opacity: 1; /* Fully visible as soon as the animation starts */
+  }
+
+  100% {
+    transform: translateX(-100%);
+    opacity: 1; /* Visible while moving */
+  }
+}
+
+.stock-sbux,
+.stock-apple,
+.stock-amd {
+  animation: moveLoop 10s linear infinite;
+}
+
+
+.translate-stock-sbux,
+.translate-stock-apple,
+.translate-stock-amd {
+  opacity: 0;
+  animation: moveLoop 10s linear infinite;
+  animation-delay: 5s;
+  animation-fill-mode: both; /* Ensures the opacity stays after the animation delay */
+
+}
+
+
+/* Base styling for hero content */
 
 
 .info {
@@ -517,9 +560,12 @@ select:focus {
 
 /*Button*/
 button {
+  display: inline-block;
   font-size: 24px;
   font-weight: bold;
   padding: 10px 20px;
+  transition: 0.2s opacity;
+  
 }
 
 .primary {
@@ -529,6 +575,7 @@ button {
   padding: 10px 20px;
   background-color: #e54646;
   border: 2px solid #e54646;
+  
 }
 
 .secondary {
@@ -541,6 +588,7 @@ button:hover {
   background-color: transparent;
   color: #E54646;
   border: 2px solid #e54646;
+  opacity: 0.8;
 }
 
 button:active {
@@ -656,7 +704,7 @@ Medium devices (640px and larger)
 .form-head{
   display: flex;
   width: 650px;
-  align-items: ;
+  align-items: center;
 }
 .form-title {
 
@@ -692,8 +740,7 @@ Large devices (1024px or larger)
   
     width: 650px;
   }
-  
-}
+  }
 
 /* ==============================
 X-large devices (1440px or larger)
