@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function menuToggle() {
     var x = document.getElementById('myNavtoggle');
     var hamburgerIcon = document.getElementById('hamburger-icon');
-  var closeIcon = document.getElementById('close-icon');
+    var closeIcon = document.getElementById('close-icon');
 
     if (x.className === 'navtoggle') {
       x.className += ' responsive';
@@ -21,44 +21,39 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-const draggableSection = document.querySelector('.price-content');
-let isDragging = false;
-let startX, scrollLeft;
 
-// Add a debounce to prevent unnecessary text selection
-draggableSection.addEventListener('mousedown', (e) => {
-  isDragging = true;
-  draggableSection.classList.add('active');
-  document.body.classList.add('dragging');
-  startX = e.pageX - draggableSection.offsetLeft;
-  scrollLeft = draggableSection.scrollLeft;
-});
-
-draggableSection.addEventListener('mouseleave', () => {
-  if (isDragging) {
-    isDragging = false;
-    document.body.classList.remove('dragging');
-  }
-});
-
-draggableSection.addEventListener('mouseup', () => {
-  if (isDragging) {
-    isDragging = false;
-    document.body.classList.remove('dragging');
-  }
-});
-
-draggableSection.addEventListener('mousemove', (e) => {
-  if (!isDragging) return; // Exit if not dragging
-  e.preventDefault();
-  const x = e.pageX - draggableSection.offsetLeft;
-  const walk = (x - startX) * 1.5; // Adjust the drag speed multiplier
-  draggableSection.scrollLeft = scrollLeft - walk;
-});
-
-// Prevent text/image selection while dragging
-document.body.addEventListener('mouseup', () => {
-  isDragging = false;
-  document.body.classList.remove('dragging');
-});
-
+  const $draggableSection = $('.price-content');
+  let isDragging = false;
+  let startX, scrollLeft;
+  
+  $draggableSection.on('mousedown', function (e) {
+    isDragging = true;
+    $draggableSection.addClass('active');
+    $('body').addClass('dragging');
+    startX = e.pageX - $draggableSection.offset().left;
+    scrollLeft = $draggableSection.scrollLeft();
+  });
+  
+  $(document).on('mousemove', function (e) {
+    if (!isDragging) return; // Exit if not dragging
+    e.preventDefault();
+    const x = e.pageX - $draggableSection.offset().left;
+    const walk = (x - startX) * 1.5; // Adjust the drag speed multiplier
+    $draggableSection.scrollLeft(scrollLeft - walk);
+  });
+  
+  $(document).on('mouseup', function () {
+    if (isDragging) {
+      isDragging = false;
+      $draggableSection.removeClass('active');
+      $('body').removeClass('dragging');
+    }
+  });
+  
+  // Optional: To handle mouse leaving the draggable area
+  $draggableSection.on('mouseleave', function () {
+    if (isDragging) {
+      isDragging = false;
+      $('body').removeClass('dragging');
+    }
+  });

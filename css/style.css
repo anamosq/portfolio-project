@@ -615,6 +615,14 @@ a:active {
 Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
+
+  .navtoggle, .navtoggle.responsive {
+    position: relative;
+  }
+
+  .navtoggle.responsive li {
+    border-bottom: none; 
+  }
   .navtoggle li:not(:first-child) {
     display: inline-block;
   }
@@ -624,9 +632,7 @@ Medium devices (640px and larger)
   .navtoggle li:last-child {
     display: none;
   }
-  .navtoggle, .navtoggle.responsive {
-    position: relative;
-  }
+
   .navtoggle li .icon {
     position: absolute;
     right: 0;
@@ -634,18 +640,7 @@ Medium devices (640px and larger)
     font-size: 20px;
     padding: 0;
   }
-  .nav ul {
-    list-style: none;
-    /* Remove bullet points */
-    margin: 0;
-    /* Remove margin */
-    padding: 0;
-    /* Remove padding */
-    display: flex;
-    /* Use flexbox for navigation items */
-    flex-direction: row;
-  }
-  
+
   .nav li {
     margin-left: 20px;
     /* Spacing between nav items */
