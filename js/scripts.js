@@ -4,6 +4,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  function menuToggle() {
+    var x = document.getElementById('myNavtoggle');
+    var hamburgerIcon = document.getElementById('hamburger-icon');
+  var closeIcon = document.getElementById('close-icon');
+
+    if (x.className === 'navtoggle') {
+      x.className += ' responsive';
+      hamburgerIcon.style.display = 'none'; // Hide the hamburger icon
+    closeIcon.style.display = 'block'; // Show the close icon
+      
+    } else {
+      x.className = 'navtoggle';
+      hamburgerIcon.style.display = 'block'; // Show the hamburger icon
+    closeIcon.style.display = 'none'; // Hide the close icon
+    }
+  }
 
 const draggableSection = document.querySelector('.price-content');
 let isDragging = false;

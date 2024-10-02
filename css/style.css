@@ -78,82 +78,49 @@ img {
 /*///////////////HEADER/////////////*/
 .header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
   background-color: white;
   position: fixed;
   width: 100%;
   z-index: 2;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin: 0;
+  
 }
 
 .container {
   width: 100%;
   padding: 10px 15px;
-  max-width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .nav ul {
+  flex-direction: column;
   list-style: none;
-  /* Remove bullet points */
   margin: 0;
-  /* Remove margin */
-  padding: 0x;
-  /* Remove padding */
-  display: flex;
-  /* Use flexbox for navigation items */
+  padding: 0;
 }
 
-.nav li {
-  margin-left: 20px;
-  /* Spacing between nav items */
-  flex: 0 1 auto;
+.navtoggle li:not(:first-child) {
+  display: none;
 }
 
-.nav a {
-  text-decoration: none;
-  /* Remove underline */
-  color: #000011;
-  /* Link color */
-  position: relative;
-  /* Position for pseudo-element */
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid #E54646;
 }
 
-.nav a:hover {
-  color: #000011;
-  /* Color on hover */
-}
-
-/* Pseudo-element for underline effect */
-.nav a::after {
-  content: "";
-  /* Required for pseudo-element */
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -3px;
-  /* Move the line further down */
-  height: 2px;
-  /* Thickness of the line */
-  background-color: #E54646;
-  /* Change to your desired color */
-  transform: scaleX(0);
-  /* Initially scale the line to 0 (hidden) */
-  transition: transform 0.3s ease;
-  /* Smooth transition */
-}
-
-.nav a:hover::after {
-  transform: scaleX(1);
-  /* Scale the line to full width on hover */
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
 }
 
 
-
+.navtoggle.responsive li:first-child  {
+  padding: 10px 0 10px;
+}
 /* ////////HERO SECTION///////// */
 
 .hero {
@@ -648,6 +615,81 @@ a:active {
 Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
+  .navtoggle li:not(:first-child) {
+    display: inline-block;
+  }
+  .navtoggle li:first-child {
+    display: none;
+  }
+  .navtoggle li:last-child {
+    display: none;
+  }
+  .navtoggle, .navtoggle.responsive {
+    position: relative;
+  }
+  .navtoggle li .icon {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    font-size: 20px;
+    padding: 0;
+  }
+  .nav ul {
+    list-style: none;
+    /* Remove bullet points */
+    margin: 0;
+    /* Remove margin */
+    padding: 0;
+    /* Remove padding */
+    display: flex;
+    /* Use flexbox for navigation items */
+    flex-direction: row;
+  }
+  
+  .nav li {
+    margin-left: 20px;
+    /* Spacing between nav items */
+    flex: 0 1 auto;
+  }
+ 
+  .nav a {
+    text-decoration: none;
+    /* Remove underline */
+    color: #000011;
+    /* Link color */
+    position: relative;
+    /* Position for pseudo-element */
+  }
+  
+  .nav a:hover {
+    color: #000011;
+    /* Color on hover */
+  }
+  
+  /* Pseudo-element for underline effect */
+  .nav a::after {
+    content: "";
+    /* Required for pseudo-element */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    /* Move the line further down */
+    height: 2px;
+    /* Thickness of the line */
+    background-color: #E54646;
+    /* Change to your desired color */
+    transform: scaleX(0);
+    /* Initially scale the line to 0 (hidden) */
+    transition: transform 0.3s ease;
+    /* Smooth transition */
+  }
+  
+  .nav a:hover::after {
+    transform: scaleX(1);
+    /* Scale the line to full width on hover */
+  }
+  
 
   .hero-content {
     top: 45%;
