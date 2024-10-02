@@ -291,6 +291,7 @@ img {
   cursor: grab;
   background-color: #000011;
   user-select: none;
+  padding-bottom: 30px;
 
 }
 
