@@ -21,10 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-
+//copilot//
   const $draggableSection = $('.price-content');
   let isDragging = false;
-  let startX, scrollLeft;
+  let startX, scrollLeft; 
   
   $draggableSection.on('mousedown', function (e) {
     isDragging = true;

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OnmiPass</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Onmipass" />
+    <meta
+      name="The first citizenship membership service"
+      content="memebership, citizenship, travel"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./img/favicon.png" rel="shortcut icon" />
+  </head>
+  <body>
+    <!-- Header  -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./img/white-logo.svg" alt="Omnipass Logo" />
+          </a>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="navtoggle" id="myNavtoggle">
+          <nav class="nav" id="menu">
+            <ul>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="icon"
+                  onclick="menuToggle()"
+                >
+                  <svg
+                    id="hamburger-icon"
+                    height="25px"
+                    version="1.1"
+                    viewBox="0 0 25 25"
+                    width="25px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      fill="none"
+                      fill-rule="evenodd"
+                      id="TabBar-Icons"
+                      stroke="none"
+                      stroke-width="1"
+                    >
+                      <g fill="#FFFFFF" id="Hamburger">
+                        <path
+                          d="M0,2 L25,2 L25,6 L0,6 L0,2 Z M0,10 L25,10 L25,14 L0,14 L0,10 Z M0,18 L25,18 L25,22 L0,22 L0,18 Z"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                  <svg
+                    id="close-icon"
+                    height="25px"
+                    version="1.1"
+                    viewBox="0 0 25 25"
+                    width="25px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="display: none"
+                  >
+                    <g
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke="none"
+                      stroke-width="2"
+                    >
+                      <g fill="#FFFFFF" id="Close">
+                        <path
+                          d="M3,3 L22,22 M22,3 L3,22"
+                          stroke="#FFFFFF"
+                          stroke-width="3"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="#footer" onclick="menuToggle()">Contact</a></li>
+              <li><a href="./index.html">Home</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main>
+      <div class="sub-menu">
+        <div class="path-description-title">
+          <div class="path-img-title"><h2>Seeker</h2></div>
+          <picture>
+            <source
+              srcset="./img/seeker-path-small.png"
+              media="(max-width:530px)" />
+            <img src="./img/seeker-path.png" alt="seeker path"
+          /></picture>
+
+          <div class="other-paths">
+            <a href="./resident.html"
+              ><picture class="resident">
+                <source
+                  srcset="./img/resident-small.png"
+                  media="(max-width:1040px)" />
+                <img
+                  class="zoom"
+                  src="./img/resident-full.png"
+                  alt="Click to go to $36 Daily Plan" /></picture
+              >Resident</a
+            >
+            <a href="./denizen.html"
+              ><picture class="denizen">
+                <source
+                  srcset="./img/denizen-small.png"
+                  media="(max-width:1040px)"
+                />
+                <img
+                  class="zoom"
+                  src="./img/denizen-full.png"
+                  alt="Click to go to $3M Daily Plan"
+                /> </picture
+              >Denizen</a
+            >
+            <a href="./nomad.html"
+              ><picture class="denizen">
+                <source
+                  srcset="./img/nomad-small.png"
+                  media="(max-width:1040px)"
+                />
+                <img
+                  class="zoom"
+                  src="./img/nomad-full.png"
+                  alt="Click to go to $3M Daily Plan"
+                /> </picture
+              >Nomad</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="path-full-container">
+        <div class="path-container">
+          <div class="path-description">
+            <p>
+              If you're in Motion due to political, economic, or environmental
+              challenges, or seeking short-term residency and access to basic
+              services in a new country, the Tier A Plan may be the right fit.
+            </p>
+          </div>
+          <div class="path-explore-button-large">
+            <button
+              class="secondary"
+              onclick="location.href='denizen.html'"
+              style="width: 350px"
+            >
+              Explore a Denizen Path
+            </button>
+          </div>
+        </div>
+        <div class="path-content">
+          <div class="tier-container">
+            <div class="tier-card">
+              <picture>
+                <source
+                  class="tier-card-size"
+                  srcset="./img/seeker-card-small.png"
+                  media="(max-width:767px)" />
+                <img src="./img/seeker-card.png" alt="seeker path"
+              /></picture>
+              <div class="select-button">
+                <button
+                  class="primary"
+                  onclick="location.href='form.html'"
+                  style="width: 250px"
+                >
+                  Select
+                </button>
+              </div>
+            </div>
+
+            <div class="tier-description">
+              <div class="price-tag">
+                <picture>
+                  <img src="./img/price-per-day.png" alt="seeker path" />
+                </picture>
+              </div>
+
+              <div class="price-description-text">
+                <p>Access ................... : Basic Services</p>
+                <ul>
+                  <li>Point Base Medical Aid - Mobile Units Only</li>
+                  <li>Temporary Networked Accommodations</li>
+                  <li>Open Learning Hubs</li>
+                  <li>Non-refoulement protection</li>
+                </ul>
+                <p>........................ : Limited legal rights</p>
+                <ul>
+                  <li>Authorized Corridor Mobility [&] Housing</li>
+                  <li>Non-refoulement protection</li>
+                </ul>
+                <p>System........................ : 01 Tier-Based Category</p>
+                <p>..................... : 01.02 Path Operation</p>
+                <p>................................. EXPLORER</p>
+
+                <p>Fig .............: A</p>
+                <p>Alg ............ :</p>
+                <p>POS Intersections.. : A1, A2</p>
+              </div>
+              <div class="select-button-large-screens">
+                <button
+                  class="primary"
+                  onclick="location.href='form.html'"
+                  style="width: 250px"
+                >
+                  Select
+                </button>
+              </div>
+            </div>
+
+            <div class="path-explore-button">
+              <button
+                class="secondary"
+                onclick="location.href='denizen.html'"
+                style="width: 350px"
+              >
+                Explore a Denizen Path
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
