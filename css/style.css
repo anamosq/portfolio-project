@@ -759,7 +759,7 @@ select {
   padding: 25px 10px 10px;
   /* Adjust padding to leave space for placeholder at the top */
   border: none;
-  border-bottom: 4px solid #BE1E2D;
+  border-bottom: 4px solid #AE1C29;
   /* Red bottom border (initially lighter) */
   background-color: white;
   font-size: 1rem;
@@ -777,7 +777,7 @@ input[type="number"]:focus,
 select:focus {
   outline: none;
   /* Remove default focus outline */
-  border-bottom: 4px solid #BE1E2D;
+  border-bottom: 4px solid #AE1C29;
   /* Highlighted bottom border in solid red */
 }
 
@@ -788,7 +788,7 @@ select:focus {
   /* Place it near the top of the input field */
   left: 10px;
   /* Align with input padding */
-  color: #BE1E2D;
+  color: #AE1C29;
   /* Red color for placeholder text */
   font-size: 0.9rem;
   /* Slightly smaller than input text */
@@ -851,8 +851,8 @@ button {
   font-weight: bold;
   color: white;
   padding: 10px 20px;
-  background-color: #BE1E2D;
-  border: 2px solid #BE1E2D;
+  background-color: #AE1C29;
+  border: 2px solid #AE1C29;
   cursor: pointer;
 
 }
@@ -870,7 +870,7 @@ button {
 button:hover {
   background-color: transparent;
   color: white;
-  border: 2px solid #BE1E2D;
+  border: 2px solid #AE1C29;
   opacity: 0.8;
 }
 
@@ -879,7 +879,7 @@ button:active {
 }
 
 button:focus {
-  border: 2px solid #BE1E2D;
+  border: 2px solid #AE1C29;
 }
 
 button:visited {
