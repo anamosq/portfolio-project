@@ -145,8 +145,7 @@ img {
   display: flex; 
   justify-content: center; 
   align-items: center; 
-  position: sticky; 
-  width: 100vw; 
+  position: sticky;  
   height: auto; 
   overflow: hidden; 
 }
@@ -342,16 +341,18 @@ display: none;
 
 .price-content {
   margin: 0;
-  padding: 0;
+  padding: 0 50px;
+  text-align: center;
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto;
+  overflow-x: hidden;
   gap: 20px;
   scroll-behavior: smooth;
   cursor: grab;
   background-color: #000011;
   user-select: none;
   padding-bottom: 30px;
+  box-sizing: border-box;
 
 }
 
@@ -994,14 +995,15 @@ Medium devices (640px and larger)
     display: block;
     position: absolute; 
     top: 65%; 
-    left: 48%; 
+    left: 50%; 
     animation-delay: 4s;
     transform: translate(-50%, -50%); 
-    transition: transform 0.3s ease;
+    transition: 500ms ease;
     z-index: 1; 
-    width: 50%;
-    min-width: 65%;
-    max-width: 50%;
+    width: 70%;
+    max-width: 1100px;
+    
+    
     }
   #selector {
     display: block;
@@ -1210,12 +1212,12 @@ Large devices (1024px or larger)
     width: 270px;
     gap: 20px;
   }
-  #tiers {
+  /*#tiers {
 
-    top: 65%; 
+    top: 65%; F
     left: 48%; 
 
-    }
+    }*/
 
     .path-title{
       margin: 0;
@@ -1332,12 +1334,12 @@ X-large devices (1440px or larger)
 
   }
 
-  #tiers {
+  /*#tiers {
     max-width: 50%;
     top: 65%; 
     left: 48%; 
 
-    }
+    }*/
     .path-text{
       margin: 0;
       padding: 0 0 0 320px;
@@ -1403,7 +1405,7 @@ X-large devices (1440px or larger)
 Extra-large devices (1920px or larger)
 ================================= */
 @media only screen and (min-width: 1920px){
-  #tiers {
+  /*#tiers {
     scale: 0.85;
     display: block;
     position: absolute;
@@ -1411,7 +1413,7 @@ Extra-large devices (1920px or larger)
     top: 60%; 
     left: 42%; 
 
-    }
+    }*/
 
   #selector {
     top: 63%; /* Center vertically */
@@ -1444,12 +1446,12 @@ Extra-large devices (1920px or larger)
 }
 
 @media only screen and (min-width: 2560px){
-  #tiers {
+  /*#tiers {
     scale: 0.65;
     display: block;
     position: absolute;
     width: auto;
     top: 48%; 
     left: 37%; 
-  }
+  }*/
 }
