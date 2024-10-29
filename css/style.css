@@ -1212,12 +1212,7 @@ Large devices (1024px or larger)
     width: 270px;
     gap: 20px;
   }
-  /*#tiers {
-
-    top: 65%; F
-    left: 48%; 
-
-    }*/
+  
 
     .path-title{
       margin: 0;
@@ -1334,12 +1329,7 @@ X-large devices (1440px or larger)
 
   }
 
-  /*#tiers {
-    max-width: 50%;
-    top: 65%; 
-    left: 48%; 
 
-    }*/
     .path-text{
       margin: 0;
       padding: 0 0 0 320px;
@@ -1405,15 +1395,7 @@ X-large devices (1440px or larger)
 Extra-large devices (1920px or larger)
 ================================= */
 @media only screen and (min-width: 1920px){
-  /*#tiers {
-    scale: 0.85;
-    display: block;
-    position: absolute;
-    width: auto;
-    top: 60%; 
-    left: 42%; 
 
-    }*/
 
   #selector {
     top: 63%; /* Center vertically */
@@ -1446,12 +1428,5 @@ Extra-large devices (1920px or larger)
 }
 
 @media only screen and (min-width: 2560px){
-  /*#tiers {
-    scale: 0.65;
-    display: block;
-    position: absolute;
-    width: auto;
-    top: 48%; 
-    left: 37%; 
-  }*/
+
 }
